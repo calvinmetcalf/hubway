@@ -4,7 +4,10 @@ var center = new google.maps.LatLng(42.349474,-71.090555);
 var xUrl = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D%22http%3A%2F%2Fwww.thehubway.com%2Fdata%2Fstations%2FbikeStations.xml%22&format=json"
   var station_infowindow = new google.maps.InfoWindow();
 $(function() {
-       
+        $( "#tabs" ).tabs({
+        collapsible: true,
+            selected: -1
+    	});
         map();
 });
       
