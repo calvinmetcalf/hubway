@@ -59,5 +59,33 @@ $(function() {
 			},"JSONP"
     )
     
-   
+   /* $.get(xUrl,
+        	function(data)
+			{
+                var stations = $(data).find('station');
+                $.each(stations,
+    				function(i,loc)
+					{
+						// Grab Station Data
+						var station_id		= $(loc).find('id').text();
+						var station_name	= $(loc).find('name').text();
+						var installed		= $(loc).find('installed').text();
+						var temporary		= $(loc).find('temporary').text();
+						var locked			= $(loc).find('locked').text();
+						var removal_date	= $(loc).find('removalDate').text();
+						var num_bikes		= $(loc).find('nbBikes').text();
+						var num_empty_docks = $(loc).find('nbEmptyDocks').text();						
+						var station_lat		= $(loc).find('lat').text();
+						var station_long	= $(loc).find('long').text();
+                        var icon = 'http://thehubway.com/assets/images/stations/hubway-map-icon-inservice.png';
+                         point = new google.maps.LatLng(station_lat, station_long);
+                        marker = new google.maps.Marker({
+    						position: point, 
+							map: map,
+							icon: icon,
+							title: station_name
+						});
+					});
+                }
+      )*/
       }
