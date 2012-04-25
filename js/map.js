@@ -32,7 +32,7 @@ $(function() {
         					position: point, 
 							map: m,
 							icon: icon,
-                            shadow: "http://dl.dropbox.com/u/37626989/shdw.png",
+                            shadow: "img/shadow.png",
 							title: loc.name
 						});
                        
