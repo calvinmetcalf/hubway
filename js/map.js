@@ -29,7 +29,7 @@ $(function() {
                        
                         );
                         if(loc.locked == 'true'){
-                        icon = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chf=bg,s,67676700&chs=45x45&cht=p&chco=000000|E5ECF9,000000&chd=t:4,4,4,4|1&chp=1.7&chma=|5");
+                        icon = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chf=bg,s,67676700&chs=45x45&cht=p&chco=000000|E8F4F7,000000&chd=t:6,2,6,2,6,2,6,2|1&chp=1&chma=5");
                         }
                         var point = new google.maps.LatLng(loc.lat, loc.long);
                       var  marker = new google.maps.Marker({
