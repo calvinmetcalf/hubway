@@ -25,15 +25,26 @@ $(function() {
                  $.each(stations,
         			function(i,loc)
 					{
-                        var icon = "http://chart.apis.google.com/chart?chf=bg,s,67676700&chs=50x50&cht=p&chco=008000|E8F4F7&chd=t:" + loc.nbBikes + "," + loc.nbEmptyDocks + "&chp=2&chma=0,5";
+                        var icon = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chf=bg,s,67676700&chs=45x45&cht=p&chco=008000|E8F4F7&chd=t:" + loc.nbBikes + "," + loc.nbEmptyDocks + "&chp=2&chma=5,0"
+                       
+                        );
                         
                         var point = new google.maps.LatLng(loc.lat, loc.long);
                       var  marker = new google.maps.Marker({
         					position: point, 
 							map: m,
 							icon: icon,
-                            shadow: "img/shadow.png",
-							title: loc.name
+                            shadow: new google.maps.MarkerImage("img/shadow.png",
+                            new google.maps.Size(42,36),
+                            new google.maps.Point(0,0),
+                            new google.maps.Point(12, 33),
+                            new google.maps.Size(32,36)
+                            
+                                ),
+							title: loc.name,
+                            shape: {
+      coord: [20,25,15],
+      type: "circle"}
 						});
                        
                         google.maps.event.addListener(marker, 'click',
@@ -42,7 +53,9 @@ $(function() {
 								station_infowindow.setContent(
 									'<img src="http://chart.apis.google.com/chart?chs=220x145&cht=p&chco=008000|E8F4F7&chd=t:' + loc.nbBikes + ',' + loc.nbEmptyDocks + '&chdl=Bikes:' + loc.nbBikes + '|Docks:' + loc.nbEmptyDocks + '&chdls=000000,10&chma=5&chtt=' + loc.name + '&chts=000000,12,l&chp=2" />' 
 									);
-                                  
+                                 station_infowindow.setOptions(
+                                     {pixelOffset: new google.maps.Size(0,20)}
+                                     );
 								station_infowindow.open(m,marker);
                                  
 							});
