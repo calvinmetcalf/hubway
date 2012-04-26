@@ -36,7 +36,7 @@ $(function() {
         					position: point, 
 							map: m,
 							icon: icon,
-                            shadow: new google.maps.MarkerImage("img/shadow.png",
+                            shadow: new google.maps.MarkerImage("http://dl.dropbox.com/u/37626989/shadow.png",
                             new google.maps.Size(42,36),
                             new google.maps.Point(0,0),
                             new google.maps.Point(12, 33),
