@@ -28,7 +28,9 @@ $(function() {
                         var icon = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chf=bg,s,67676700&chs=45x45&cht=p&chco=008000|E8F4F7&chd=t:" + loc.nbBikes + "," + loc.nbEmptyDocks + "&chp=2&chma=5,0"
                        
                         );
-                        
+                        if(loc.locked == 'true'){
+                        icon = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chf=bg,s,67676700&chs=45x45&cht=p&chco=000000|E5ECF9,000000&chd=t:4,4,4,4|1&chp=1.7&chma=|5");
+                        }
                         var point = new google.maps.LatLng(loc.lat, loc.long);
                       var  marker = new google.maps.Marker({
         					position: point, 
